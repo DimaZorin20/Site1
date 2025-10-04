@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins',sans-serif;;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+.wrapper {
+    background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(26, 14, 1, 1) 100%);
+    width: 100%;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+/* Секция №1 - Верхняя панель */
+
+header {
+    padding: 50px 0;
+}
+
+header .logo {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+header nav {
+    float: right;
+    width: 50%;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff;
+}
+
+header nav ul li.active::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #DC7000;
+    border-radius: 3px;
+    position: relative;
+    top: 5px;
+    left: -5px;
+
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    border-bottom: 3px solid #DC7000;
+    border-radius: 3px;
+    transition: all 50ms ease-in-out;
+}
+
+header nav ul li.btn a, .email .block button {
+    background: #FA9021;
+    padding: 15px 40px;
+    border-radius: 6px;
+    transition: all 0.5s ease;
+}
+
+header nav ul li.btn a:hover, .email .block button:hover {
+    background: #d67908;
+}
+
+/*Секция №2 - Презентация*/
+
+.hero {
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero--info {
+    width: 520px;
+    height: 510px;
+    padding-top: 0px;
+}
+
+.hero--info h2 {
+    color: #E87D0E;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.hero--info h1 {
+    padding-top: 15px;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.hero--info p {
+    font-weight: 500;
+    line-height: 170%;
+    margin: 30px 0;
+}
+
+.hero--info .btn {
+    font-size: 16px;
+    background: #FA9021;
+    color: #fff;
+    border-radius: 40px;
+    padding: 15px 40px;
+    border: none;
+    transition: all 500ms ease;
+}
+
+.hero--info .btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hero img {
+    position: absolute;
+    top: -150px;
+    right: 0;
+}
+
+/* Секция №3 Игры */
+
+.trending {
+    padding-top: 100px;
+}
+
+.trending h3 {
+    font-weight: 600;
+    font-size: 31px;
+}
+
+.trending .see-all, .projects .see-all {
+    color: #FFF;
+    background: rgba(255, 255,255, 0.11);
+    padding: 12px 23px;
+    border-radius: 10px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+}
+
+.trending .see-all:hover, .projects .see-all:hover {
+    background: rgba(255, 255 , 255, 0.2);
+    transform: scale(1.1);
+}
+
+.trending .games {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.trending .games span {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.trending .games span img {
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.big-text {
+    font-weight: 700;
+    font-size: 35px;
+    padding: 50px 0;
+    text-align: center;
+    width: 826px;
+    line-height: 170%;
+}
+
+.banner {
+    padding: 40px 0;
+}
+
+.banner h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.banner p {
+    margin: 20px 0;
+    font-size: 16px;
+    width: 500px;
+}
+
+.banner img {
+    width: 1146px;
+    height: 462px;
+    border-radius: 15px;
+}
+
+/* Секция №4 с изображением на фоне */
+
+.features {
+    background: url("img/Bg.svg") no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 0;
+}
+
+.features h3, .features p {
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.features .info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.features .info .block {
+    text-align: center;
+    width: 21%;
+    margin: 30px 2%;
+}
+
+/* Секция №5 с проектами */
+
+.projects h3 {
+    padding-top: 30px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.projects p {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.projects .images {
+    display: flex;
+    justify-content: space-around;
+    padding: 25px 0;
+}
+
+.projects .see-all {
+    float: none;
+    width: 70px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Секция №6 подписка на рассылку */
+
+.email {
+    padding-bottom: 120px;
+}
+
+.email h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.email p {
+    font-size: 16px;
+}
+
+.email .block {
+    margin-top: 30px;
+    border-radius: 15px;
+    padding: 40px 3%;
+    width: 94%;
+    background: #1C140F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email .block h4 {
+    font-size: 30px;
+}
+
+.email .block p {
+    font-size: 16px;
+    width: 500px;
+}
+
+.email .block input {
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    width: 450px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 20px 30px;
+    z-index: 1;
+    position: relative;
+    right: -110px;
+}
+
+.email .block input::placeholder {
+    color: #898989;
+}
+
+.email .block button {
+    color: #fff;
+    font-size: 16px;
+    padding: 13px 17px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
